@@ -1,4 +1,6 @@
 @CHARSET "UTF-8";
 
-#logo{width:800px; height:150px;}
+
+#logo{width:200px; height:150px;}
 #hdrbtn{margin-top: 10px;}
+#navlist{list-style: none;}
