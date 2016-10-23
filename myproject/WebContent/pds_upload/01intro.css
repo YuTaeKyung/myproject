@@ -1,0 +1,20 @@
+* {font-style: italic}
+/*범용 선택자*/
+h1{color: cadetblue;}
+/*요소 선택자*/
+
+/* h1 {text-align: center;}
+p {text-align: center;}*/
+
+h1,p {text-align: center;}
+/*그룹 선택자*/
+
+ul li em {color: darkorange}
+/*하위 선택자*/
+p.bolder {font-weight:bold}
+/*p.bolder, p.bolder {font-weight:bold}*/
+.bolder {font-weight:bold}
+/*클래스 선택자*/
+
+#em2 {font-size: 32px; color: red; font-style: normal}
+/*id 선택자*/
