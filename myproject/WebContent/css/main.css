@@ -1,6 +1,8 @@
 @CHARSET "UTF-8";
-
-
-#logo{width:200px; height:150px;}
-#hdrbtn{margin-top: 10px;}
-#navlist{list-style: none;}
+body{background:black;color: white; min-width: 800px;}
+#logo {width:300px; height:120px;}
+ul{list-style: none; margin-top: 20px;}
+li{ display:inline; padding : 20px; font-size: 20px}
+a:link{color:white;}
+a:visited{color:white;}
+a:hover{text-decoration: none; color:red;}
