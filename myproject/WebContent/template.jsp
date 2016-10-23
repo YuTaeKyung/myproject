@@ -97,8 +97,8 @@
 	<!-- 로그인 모달 끝 -->
 	
 	
-	<script type="text/javascript" src="jquery/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="bs3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#joinbtn").click(function(){
