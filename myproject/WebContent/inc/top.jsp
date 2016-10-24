@@ -6,15 +6,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" 
 href="<%=request.getContextPath()%>/bs3/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/main.css?ver=2">
-<title>템플릿 페이지</title>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/main.css?ver=8">
+<title>LIVERPOOL</title>
+
+<script type="text/javascript" src="<%=request.getContextPath()%>/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<header style="margin: 20px 0">
 				<div class="col-sm-6">
-					<a href="<%=request.getContextPath()%>/main.jsp">
+					<a href="<%=request.getContextPath()%>/index.jsp">
 					<img id="logo" src="<%=request.getContextPath()%>/images/리버풀로고.jpg"></a>
 				</div>
 				<div class="col-sm-6 pull-right" style="padding-top:40px">
@@ -53,4 +55,3 @@ href="<%=request.getContextPath()%>/bs3/css/bootstrap.min.css">
 	
 	
 	<section>
-	

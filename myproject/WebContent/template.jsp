@@ -6,15 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" 
 href="<%=request.getContextPath()%>/bs3/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/main.css?ver=2">
-<title>템플릿 페이지</title>
+<link rel="stylesheet" type="text/css" href="css/main.css?ver=0">
+<title>LIVERPOOL</title>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<header style="margin: 20px 0">
 				<div class="col-sm-6">
-					<a href="<%=request.getContextPath()%>/main.jsp">
+					<a href="<%=request.getContextPath()%>/index.jsp">
 					<img id="logo" src="<%=request.getContextPath()%>/images/리버풀로고.jpg"></a>
 				</div>
 				<div class="col-sm-6 pull-right" style="padding-top:40px">
@@ -63,7 +63,7 @@ href="<%=request.getContextPath()%>/bs3/css/bootstrap.min.css">
 	<footer>
 		<div class="row">
             <div class="col-sm-12">
-                <p class="text-center text-capitalize">&copy;you will never walk alone. 2016. powered by taekung. all right reserved.</p>
+                <p id="foot" class="text-center text-capitalize">&copy;you will never walk alone. 2016. powered by taekung. all right reserved.</p>
             </div>
         </div>
 	</footer>
