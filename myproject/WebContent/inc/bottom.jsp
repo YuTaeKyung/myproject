@@ -18,10 +18,6 @@
 
 
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/bs3/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/jquery/jquery-3.1.0.min.js"></script>
-<script type="text/javascript">
 
-</script>
 </body>
 </html>

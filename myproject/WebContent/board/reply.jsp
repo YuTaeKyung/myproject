@@ -1,6 +1,29 @@
+<%@page import="myproject.board.model.BoardVO"%>
+<%@page import="myproject.board.model.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@include file="../inc/top.jsp"%>
+    pageEncoding="UTF-8"%>
+<%@include file= "../inc/top.jsp"%>
+<%
+	String no = request.getParameter("no");
+	
+	String msg = "", url = "/board/list.jsp";
+	
+	if(no==null || no.isEmpty()){
+		msg = "잘못된 URL 입니다!";
+		request.setAttribute("msg", msg);
+		request.setAttribute("url", url); 
+%>
+<jsp:forward page="../common/message.jsp"></jsp:forward>
+<%}
+request.getParameter("no");
+BoardDAO dao = new BoardDAO();
+BoardVO vo = dao.selectByNo(Integer.parseInt(no));
+	
+
+
+
+%>
+
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -24,11 +47,16 @@
 
 
 <div class="col-sm-offset-2 col-sm-10">
-<h1>자유 게시판</h1>
+<h1>답변 글쓰기</h1>
 
 </div>
-<form id="boardfrm" name="boardfrm" method="post" action="write_ok.jsp"
+<form id="boardfrm" name="boardfrm" method="post" action="reply_ok.jsp"
 	enctype="multipart/form-data" class="form-horizontal">
+		
+		<input type="hidden" name="groupNo" value= "<%=vo.getGroupNo() %>">
+		<input type="hidden" name="sortNo" value= "<%=vo.getSortNo() %>">
+		<input type="hidden" name="step" value= "<%=vo.getStep() %>">
+		
 		
 	<div class="form-group">	
 
@@ -44,7 +72,7 @@
 		<label for="pwd" class="control-label col-sm-2">비밀번호
 			:</label>
 		<div class="col-sm-4">
-			<input id= "pwd" type="password" name="pwd" class="form-control">
+			<input type="password" name="pwd" class="form-control">
 		</div>
 	</div>
 	
@@ -52,7 +80,8 @@
 		<label for="title" class="control-label col-sm-2">제목
 			:</label>
 		<div class="col-sm-4">
-			<input id="title" type="text" name="title" class="form-control">
+			<input type="text" name="title" class="form-control"
+			value="RE : <%=vo.getTitle()%>">
 		</div>	
 	</div>
 		
@@ -80,7 +109,7 @@
 	
 	
 		<div class="text-center">
-			<input type="submit" value="등록" class="btn btn-success"> 
+			<input type="submit" value="답변등록" class="btn btn-success"> 
 			<input type="button" value="글목록" class="btn btn-info"
 				onclick="location.href='list.jsp'">
 		</div>
@@ -88,4 +117,10 @@
 </form>
 
 
-<%@include file="../inc/bottom.jsp"%>
+
+
+
+
+
+
+<%@include file= "../inc/bottom.jsp"%>
